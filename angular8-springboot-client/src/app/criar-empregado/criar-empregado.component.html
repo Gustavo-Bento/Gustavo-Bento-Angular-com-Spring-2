@@ -1,0 +1,26 @@
+<h3>Criar Empregado</h3>
+<div [hidden]="submitido" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Primeiro Nome</label>
+      <input type="text" class="form-control" id="primeiroNome" required [(ngModel)]="empregado.firstName" name="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Ultimo Nome</label>
+      <input type="text" class="form-control" id="ultimoNome" required [(ngModel)]="empregado.lastName" name="lastName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Email Id</label>
+      <input type="text" class="form-control" id="emailId" required [(ngModel)]="empregado.emailId" name="emailId">
+    </div>
+
+    <button type="submit" class="btn btn-success">Cadastrar</button>
+  </form>
+</div>
+
+<div [hidden]="!submetido">
+  <h4>Cadastro realizado com sucesso!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmpregado()">Add</button> -->
+</div>

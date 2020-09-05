@@ -1,0 +1,21 @@
+<h3>Atualizar Empregado </h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">PrimeiroNome</label>
+      <input type="text" class="form-control" id="primeiroNome" required [(ngModel)]="empregado.primeiroNome" name="primeiroNome">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Ultimo Nome</label>
+      <input type="text" class="form-control" id="ultimoNome" required [(ngModel)]="empregado.ultimoNome" name="ultimoNome">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Email Id</label>
+      <input type="text" class="form-control" id="emailId" required [(ngModel)]="empregado.emailId" name="emailId">
+    </div>
+
+    <button type="submit" class="btn btn-success">Atualizar</button>
+  </form>
+</div>
