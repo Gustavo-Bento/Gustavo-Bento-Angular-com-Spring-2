@@ -11,7 +11,7 @@ import {Router} from '@angular/router';
   styleUrls: ["./empregado-lista.component.css"]
 })
 export class EmpregadoListaComponent implements OnInit{
-  empregados Observable<Empregado[]>;
+  empregados: Observable<Empregado[]>;
 
   constructor(private empregadoService: EmpregadoService,
     private router: Router){}
@@ -20,7 +20,7 @@ export class EmpregadoListaComponent implements OnInit{
       this.reloadData();
     }
     reloadData(){
-      this.empregados = this.empreagoService.getEmpregadosLista();
+      this.empregados = this.empregadoService.getEmpregadosLista();
     }
 
     deleteEmpregado(id: number){
